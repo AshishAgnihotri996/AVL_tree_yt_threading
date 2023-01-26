@@ -210,3 +210,42 @@ a = 100
 #
 # add()
 
+#json to pyton file
+#loads - does not read from file
+# load - read from file
+
+import json
+data = {
+    "age":23,
+    'city':'nashiik',
+    'ismarried':False,
+    'name':'ashish',
+    'number':8669109944
+}
+
+# json_Data = json.dumps(data)
+# print(json_Data)
+# print(type(json_Data))
+#
+# f = json.loads(json_Data)
+# print(f)
+# print(type(f))
+
+# f = open('data.json',mode = 'r')
+# my_data = json.load(f)
+# print(f)
+# f.close()
+
+
+def salary_credits():
+    f = open('demo.json','r')
+    data = json.load(f)
+    print(data)
+    for key in data['employees']:
+        if data['emloyees'][key]['bank_name'] == 'bank of maharahtra':
+            print('process saraly')
+            #salary processing code
+            print(f"saalry{data['employees'][key]['bank_name']} processing in {data['empolyees'][key]['bank_name']}")
+    f.close()
+
+salary_credits()
